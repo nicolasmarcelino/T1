@@ -14,7 +14,7 @@ Para representar essa relação, é ideal modelar o problema como um **grafo dir
 
 # Modelagem em grafo
 
-Modelamos o problema como um grafo direcionado. A direção é necessária porque a relação de queda é assimétrica: x derrubar y não implica que y derrube x.
+Modelamos o problema como um grafo direcionado não ponderado.
 
 - Vértices: cada vértice representa uma peça de dominó (n vértices).
 - Arestas: cada relação de dominos que caem.
