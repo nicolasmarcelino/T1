@@ -16,6 +16,9 @@ Para representar essa relação, é ideal modelar o problema como um **grafo dir
 
 Modelamos o problema como um grafo direcionado não ponderado.
 
-- Vértices: cada vértice representa uma peça de dominó (n vértices).
-- Arestas: cada relação de dominos que caem.
-- Tipo do grafo: direcionado e não ponderado.
+### Vértice
+- Cada vértice representa uma peça de dominó (n vértices).
+### Arestas
+- Cada relação de dominos que caem.
+### Tipo do grafo 
+- Direcionado e não ponderado.
