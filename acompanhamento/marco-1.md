@@ -16,13 +16,27 @@ Para representar essa relação, é ideal modelar o problema como um **grafo dir
 
 Modelamos o problema como um grafo direcionado não ponderado.
 
-### Vértice
+## Vértice
 - Cada vértice representa uma peça de dominó (n vértices).
-### Arestas
-- Cada aresta dirigida de x para y.
-### Tipo do grafo 
-- Direcionado e não ponderado.
+## Arestas
+- Cada relação de dominos que caem.
+## Tipo do grafo 
+- Direcionado
+- Não ponderado
+- Conexo
 
 # Instância Pequena
+| Entrada | Saída |
+| -------- | ------- |
+| 1 | 2 |
+3 2 1
+1 2
+2 3
+2
+
+# Restrições
+#### N, M, L ≤ 10.000.
 
 # Hipotese inicial
+
+Em termos simples, atingir os vértices (dominós) que foram empurrado manualmente e verificar se eles apontam para outro vértice (dominó).
