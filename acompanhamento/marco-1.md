@@ -19,6 +19,10 @@ Modelamos o problema como um grafo direcionado não ponderado.
 ### Vértice
 - Cada vértice representa uma peça de dominó (n vértices).
 ### Arestas
-- Cada relação de dominos que caem.
+- Cada aresta dirigida de x para y.
 ### Tipo do grafo 
 - Direcionado e não ponderado.
+
+# Instância Pequena
+
+# Hipotese inicial
