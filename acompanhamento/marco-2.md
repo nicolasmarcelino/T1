@@ -17,8 +17,8 @@ Na imagem referenciamos a lista de adjacência, a representação em grafos do p
 
 | **Métrica** | **Caso 1 (Cadeia simples)** | **Caso 2 (Sem arestas)** | **Caso 3 (Cíclico)** |
 |-------------|------------------------------|--------------------------|----------------------|
-| **Ordem |V|** | 3 | 5 | 4 |
-| **Tamanho |E|** | 2 | 0 | 4 |
+| **Ordem** |3|** | 4 | 5 | 4 |
+| **Tamanho** |2|** | 4 | 0 | 4 |
 | **Grau de saída d⁺** | d⁺(1)=1, d⁺(2)=1, d⁺(3)=0 | todos = 0 | todos = 1 |
 | **Grau de entrada d⁻** | d⁻(1)=0, d⁻(2)=1, d⁻(3)=1 | todos = 0 | todos = 1 |
 | **Densidade ρ** | 2/(3×2) = 0,33 | 0/(5×4) = 0 | 4/(4×3) = 0,33 |
