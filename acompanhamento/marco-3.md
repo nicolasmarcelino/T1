@@ -93,4 +93,46 @@ Neste ponto, o algoritmo não pode prosseguir, pois o único vizinho de 1 especi
 
 É possível constatar a propriedade fracamente conexa do grafo ao verificar a tabela do caminho percorrido, mostrando que não foi possível alcançar o vértice 6.
 
+# Aplicabilidade ao problema
+
+Retornando ao problema dos dominós, segue o caso de teste apresentado no problema:
+
+```
+1
+3 2 1
+1 2
+2 3
+2
+```
+
+A entrada ilustra, segundo a contextualização do problema, um cenário onde 3 dominós enumerados de 1 a 3 estão enfileirados. O dominó 1 atrás do 2 e o dominó 2 atrás do 3, encerrando a sequência. Manualmente, o dominó 2 é derrubado, o que implica a queda do dominó 3.
+
+O objetivo é descobrir **quantos dominós caíram** a partir da queda de um. É possível interpretar a situação-problema como um grafo direcionado representado pela seguinte lista de adjacência:
+
+```
+1 -> [2]
+2 -> [3]
+3
+```
+
+Aplicando a DFS a partir do vértice 2, é possível alcançar todos os vértices que se conectam a ele.
+
+## DFS(2)
+
+| v | marked[] | edgeTo[v] |
+|---|----------|-----------|
+| 1 | f        |           |
+| 2 | v        |           |
+| 3 | f        |           |
+
+## DFS(3)
+
+| v | marked[] | edgeTo[v] |
+|---|----------|-----------|
+| 1 | f        |           |
+| 2 | v        |           |
+| 3 | v        | 3         |
+
+Assim, a contagem associado aos vértices marcados pelo algoritmo de pesquisa em profundidade pode ser interpretado, neste problema, como o número de dominós derrubados a partir do dominó inicial.
+
 **Referência:** a descrição e a aplicação do algoritmo DFS apresentadas neste documento foi baseada no material [A3_BFS_DFS.pdf](https://github.com/carubbi/RPG/blob/main/mat-didatico/aulas/A3_BFS_DFS.pdf), do professor Ricardo Carubbi, que utiliza como referência o livro *Algorithms*, de Robert Sedgewick e Kevin Wayne.
