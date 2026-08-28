@@ -5,7 +5,6 @@
 # Participantes
 - Nicolas Marcelino da Mota
 - Gabriel Rocha da Cunha
-- Breno Sampaio Gonçalves
 
 ## Problema D: Dominoes 2
 
