@@ -85,3 +85,31 @@ O único vizinho do vértice 1 é o vértice 2, já visitado.
 |       | 7 |     v    |     5     |     3    |
 
 O vértice 7 não aponta para nenhum outro vértice. Como a fila esvazia, o algoritmo encerra sua execução.
+
+# Observações sobre a alcançabilidade
+
+Vale destacar que o vértice **6** nunca é marcado durante a execução. Isso acontece porque, embora `6` aponte para `7`, nenhum outro vértice do grafo aponta *para* `6`, ou seja, `6` é inalcançável a partir do vértice 2. Esse comportamento reforça uma característica importante tanto do BFS quanto do DFS: ambos exploram apenas o subgrafo alcançável a partir do vértice de origem.
+
+O BFS visita cada vértice e cada aresta do subgrafo alcançável exatamente uma vez, resultando em complexidade **O(V + E)**, a mesma ordem de grandeza do DFS aplicado no marco anterior. A diferença entre os dois algoritmos não está na complexidade assintótica, e sim na **ordem de visita** e no **tipo de caminho encontrado**:
+
+| | DFS | BFS |
+|---|---|---|
+| Estrutura de dados | Pilha | Fila |
+| Ordem de visita | Aprofunda o quanto possível antes de retroceder | Explora por níveis (vizinhos mais próximos primeiro) |
+| Caminho encontrado (`edgeTo`) | Não garante caminho mínimo | Garante o caminho com menor número de arestas |
+| Uso típico | Detecção de ciclos, ordenação topológica, componentes conexas | Menor caminho em grafos não ponderados, nível/distância entre vértices |
+
+No exemplo aplicado, ambos os algoritmos alcançam o mesmo conjunto de vértices a partir de 2 (`{2,3,4,5,1,7}`), mas a árvore de busca (`edgeTo`) resultante é diferente, já que o BFS prioriza sempre o vizinho descoberto mais cedo na fila. A figura abaixo representa a _BFS tree_ resultante:
+
+```
+     2
+   ↙   ↘
+  3     4
+  ↓     ↓
+  5     1
+  ↓
+  7
+```
+
+
+**Referência:** a descrição e a aplicação do algoritmo BFS apresentadas neste documento foi baseada no material [A3_BFS_DFS.pdf](https://github.com/carubbi/RPG/blob/main/mat-didatico/aulas/A3_BFS_DFS.pdf), do professor Ricardo Carubbi, que utiliza como referência o livro *Algorithms*, de Robert Sedgewick e Kevin Wayne.
